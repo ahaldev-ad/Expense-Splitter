@@ -48,7 +48,8 @@ export const AddExpense = ({ members, groups, activeGroupId, onAddExpense }) => 
     setAiError('');
 
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        // Updated API Key for AI Auto Fill
+        const ai = new GoogleGenAI({ apiKey: "AIzaSyAPxjF6rCdXmUeYMTXBp0rpHHYNYHmdKL0" });
         
         // Create a context string for the AI to match names to IDs
         const membersContext = members.map(m => `Name: "${m.name}", ID: "${m.id}"`).join("; ");
